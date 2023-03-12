@@ -13,6 +13,9 @@
 		2341AA9829BE8882006475BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2341AA9629BE8882006475BF /* Main.storyboard */; };
 		2341AA9A29BE8883006475BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2341AA9929BE8883006475BF /* Assets.xcassets */; };
 		2341AA9D29BE8883006475BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2341AA9B29BE8883006475BF /* LaunchScreen.storyboard */; };
+		2341AAAC29BE8A18006475BF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2341AAAB29BE8A18006475BF /* SnapKit */; };
+		2341AAAE29BE8A18006475BF /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2341AAAD29BE8A18006475BF /* SnapKit-Dynamic */; };
+		2341AAB129BE8A44006475BF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2341AAB029BE8A44006475BF /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2341AAB129BE8A44006475BF /* Alamofire in Frameworks */,
+				2341AAAC29BE8A18006475BF /* SnapKit in Frameworks */,
+				2341AAAE29BE8A18006475BF /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,71 @@
 		2341AA8F29BE8882006475BF /* iwCovidPoint */ = {
 			isa = PBXGroup;
 			children = (
+				2341AAA429BE8892006475BF /* StartScreen */,
+				2341AAA829BE8920006475BF /* Extensions */,
+				2341AAA929BE89AC006475BF /* ServerLayer */,
 				2341AA9029BE8882006475BF /* AppDelegate.swift */,
 				2341AA9229BE8882006475BF /* SceneDelegate.swift */,
-				2341AA9429BE8882006475BF /* ViewController.swift */,
-				2341AA9629BE8882006475BF /* Main.storyboard */,
 				2341AA9929BE8883006475BF /* Assets.xcassets */,
 				2341AA9B29BE8883006475BF /* LaunchScreen.storyboard */,
 				2341AA9E29BE8883006475BF /* Info.plist */,
 			);
 			path = iwCovidPoint;
+			sourceTree = "<group>";
+		};
+		2341AAA429BE8892006475BF /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2341AAA729BE88FB006475BF /* ViewController */,
+				2341AAB229BE8A7A006475BF /* Views */,
+				2341AAA629BE88F1006475BF /* ViewModels */,
+				2341AAA529BE88DD006475BF /* Models */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		2341AAA529BE88DD006475BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2341AAA629BE88F1006475BF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2341AAA729BE88FB006475BF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2341AA9429BE8882006475BF /* ViewController.swift */,
+				2341AA9629BE8882006475BF /* Main.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2341AAA829BE8920006475BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2341AAA929BE89AC006475BF /* ServerLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServerLayer;
+			sourceTree = "<group>";
+		};
+		2341AAB229BE8A7A006475BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +145,11 @@
 			dependencies = (
 			);
 			name = iwCovidPoint;
+			packageProductDependencies = (
+				2341AAAB29BE8A18006475BF /* SnapKit */,
+				2341AAAD29BE8A18006475BF /* SnapKit-Dynamic */,
+				2341AAB029BE8A44006475BF /* Alamofire */,
+			);
 			productName = iwCovidPoint;
 			productReference = 2341AA8D29BE8882006475BF /* iwCovidPoint.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +178,10 @@
 				Base,
 			);
 			mainGroup = 2341AA8429BE8882006475BF;
+			packageReferences = (
+				2341AAAA29BE8A18006475BF /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2341AAAF29BE8A44006475BF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 2341AA8E29BE8882006475BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +429,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2341AAAA29BE8A18006475BF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.0;
+			};
+		};
+		2341AAAF29BE8A44006475BF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2341AAAB29BE8A18006475BF /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2341AAAA29BE8A18006475BF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		2341AAAD29BE8A18006475BF /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2341AAAA29BE8A18006475BF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		2341AAB029BE8A44006475BF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2341AAAF29BE8A44006475BF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2341AA8529BE8882006475BF /* Project object */;
 }
